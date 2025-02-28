@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monuments Gallery</title>
+    <link rel="stylesheet" href="/CSS/styles_monuments.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <header class="gallery-header">
+            <h1>Monuments Gallery</h1>
+            <div class="controls">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search monuments...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+                <button id="addBtn" class="add-button">+ Add Monument</button>
+            </div>
+        </header>
+        
+        <div id="monumentsGrid" class="monuments-grid"></div>
+        
+        <!-- Modal for Add/Edit -->
+        <div id="monumentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Add New Monument</h2>
+                <form id="monumentForm">
+                    <input type="text" id="monumentName" placeholder="Monument Name" required>
+                    <textarea id="monumentDesc" placeholder="Description" required></textarea>
+                    <input type="text" id="monumentCity" placeholder="City" required>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/Javascript/script_for_monument.js"></script>
+</body>
+</html>
